@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: heena-backend-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: heena-backend
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 3000

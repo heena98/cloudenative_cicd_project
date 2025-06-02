@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: heena-backend-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: heena-backend
+  template:
+    metadata:
+      labels:
+        app: heena-backend
+    spec:
+      containers:
+      - name: heena-backend
+        image: heenadevops.jfrog.io/docker-trial/heena-backend-app:latest
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: jfrogcred
