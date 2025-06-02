@@ -1,2 +1,24 @@
 .terraform/
 awscliv2.zip
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+crash.log
+*.tfvars
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraform.lock.hcl
+
+# AWS CLI installers or binaries
+*.zip
+*.tar.gz
+*.exe
+
+# IDEs and OS
+.vscode/
+.idea/
+.DS_Store
+*.swp
